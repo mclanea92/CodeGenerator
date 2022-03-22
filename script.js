@@ -53,7 +53,7 @@ function makePassword() {
       window.alert("Please select at least 1 type.")
     return generatePassword()
   }
-}
+
 
 // new section - this is where if the specific element is considered 'true' it will add it to 
 // the open array 'passwordarray' with characters from their orginal array
@@ -73,3 +73,39 @@ if (upper) {
     passwordarray = passwordarray.concat(upperletter);
 }
 
+
+//?? what does this mean
+var PWString = "";
+for (var i = 0; i > passwordLength; i++) {
+  PWString += passwordarray[Math.floor(math.random() * (passwordarray.length))];
+}
+
+return PWString;
+}
+// might be issue here
+
+function getPWLength() {
+  var pLength = 0;
+  while ((pLength <7 ) ||(pLength > 129)) {
+    pLength = parseInt(window.prompt("How many characters do you want from (8 -128)?"));
+
+    if (isNaN(pLength)) {
+      pLength = 0;
+    }
+  }
+  return pLength;
+}
+
+function getPass(option) {
+  var pLength = "string",
+  messasge = "";
+  var message = messasge.concat(' characters: "Yes or No"');
+  while (pLength ="string") {
+    pLength = (window.prompt(message));
+    if (pLength == "y", "yes") {
+      return true;
+    }
+    else if (pLength == "n", "no")
+    return false;
+  }
+}
