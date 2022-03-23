@@ -1,93 +1,78 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// First function.  This first makes arrays with the specific character elements like below.
+function makePassword() {
+  const number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  const sCharacter = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "?", "/", "-", ":", ";", "[", "]", "{", "}", ".", "<", ">", "=", "_", "`", "|", "~"];
+  const lowerletter = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+  const upperletter = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
+  var passwordarray = [];
+
+  var passwordLength = getPWLength();
+
+// Still part of the first function; This goes though the object properties to determine if they are true or false.
+// This is done with the alert. 
+
+  
+  var numbers = confirm("Would you like Numbers?")
+  var special = confirm("Would you like Special characters?")
+  var lower = confirm("Would you like Lowercase letters?")
+  var upper = confirm("Would you like Uppercase letters?")
+
+  // if & else are used to go make sure that something is selected yes for when the prompt comes up,
+  // if none are selected, it will display the message "Please select at least 1 type" and returns
+  //to the beginning of the prompts.
+    // if ((numbers) || (special) || (lower) || (upper)) {
+    //   eleSelect = false;
+    // }
+
+
+// new section - this is where if the specific element is considered 'true' it will add it to 
+// the open array 'passwordarray' with characters from their orginal array
+if (numbers) {
+passwordarray = passwordarray.concat(number);
+}
+
+if (special) {
+passwordarray = passwordarray.concat(sCharacter);
+}
+
+if (lower) {
+  passwordarray = passwordarray.concat(lowerletter);
+}
+
+if (upper) {
+  passwordarray = passwordarray.concat(upperletter);
+}
+
+
+var passwordString = "";
+for (var i = 0; i < passwordLength; i++) {
+passwordString += passwordarray[Math.floor(Math.random() * (passwordarray.length))];
+console.log(passwordString)
+}
+
+return passwordString;
+}
+
+
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var password = makePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
 
-
-// First function.  This first makes arrays with the specific character elements like below.
-function makePassword() {
-    const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-
-    const sCharacter = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "?",
-     "/", "-", ":", ";", "[", "]", "{", "}", ".", "<", ">", "=", "_", "`", "|", "~"];
-
-    const lowerletter = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
-     "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-
-    const upperletter = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
-    "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-
-    var passwordarray = [];
-
-    var passwordLength = getPWLength();
-
-// Still part of the first function; This goes though the object properties to determine if they are true or false.
-// This is done with the alert. 
-
-    var eleSelect = true;
-  if (eleSelect == true) {
-    var number = getPass("Numbers")
-    var special = getPass("Special")
-    var lower = getPass("Lowercase")
-    var upper = getPass("Uppercase")
-
-    // if & else are used to go make sure that something is selected yes for when the prompt comes up,
-    // if none are selected, it will display the message "Please select at least 1 type" and returns
-    //to the beginning of the prompts.
-      if ((lower) || (upper) || (number) || (special)) {
-        eleSelect = false;
-      }
-    }
-
-  else {
-      window.alert("Please select at least 1 type.")
-    return generatePassword()
-  }
-
-
-// new section - this is where if the specific element is considered 'true' it will add it to 
-// the open array 'passwordarray' with characters from their orginal array
-if (number) {
-  passwordarray = passwordarray.concat(numbers);
-}
-
-if (special) {
-  passwordarray = passwordarray.concat(sCharacter);
-}
-
-if (lower) {
-    passwordarray = passwordarray.concat(lowerletter);
-}
-
-if (upper) {
-    passwordarray = passwordarray.concat(upperletter);
-}
-
-
-//?? what does this mean
-var PWString = "";
-for (var i = 0; i > passwordLength; i++) {
-  PWString += passwordarray[Math.floor(math.random() * (passwordarray.length))];
-}
-
-return PWString;
-}
-// might be issue here
 
 function getPWLength() {
   var pLength = 0;
-  while ((pLength <7 ) ||(pLength > 129)) {
-    pLength = parseInt(window.prompt("How many characters do you want from (8 -128)?"));
+  while ((pLength < 8 ) || (pLength > 128)) {
+    pLength = parseInt(window.prompt("How many characters do you want from (8 - 128)?"));
 
     if (isNaN(pLength)) {
       pLength = 0;
@@ -96,16 +81,9 @@ function getPWLength() {
   return pLength;
 }
 
-function getPass(option) {
-  var pLength = "string",
-  messasge = "";
-  var message = messasge.concat(' characters: "Yes or No"');
-  while (pLength ="string") {
-    pLength = (window.prompt(message));
-    if (pLength == "y", "yes") {
-      return true;
-    }
-    else if (pLength == "n", "no")
-    return false;
-  }
-}
+
+
+
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
