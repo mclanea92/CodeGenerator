@@ -12,19 +12,18 @@ function makePassword() {
 
   var passwordLength = getPWLength();
 
-// Still part of the first function; This goes though the object properties to determine if they are true or false.
-// This is done with the alert. 
+
 
   
-  
+  //Confirm added to find out boolean true or false and to be added to the passwordarray array.
   var numbers = confirm("Would you like Numbers? (Yes-OK ; No-Cancel)")
   var special = confirm("Would you like Special characters? (Yes-OK ; No-Cancel)")
   var lower = confirm("Would you like Lowercase letters? (Yes-OK ; No-Cancel)")
   var upper = confirm("Would you like Uppercase letters? (Yes-OK ; No-Cancel)")
   
 
-// new section - this is where if the specific element is considered 'true' it will add it to 
-// the open array 'passwordarray' with characters from their orginal array
+// This is where if the specific element is considered 'true' from the confirms above. It 
+// will add it to the open array 'passwordarray' with characters from their orginal array
 if (numbers) {
 passwordarray = passwordarray.concat(number);
 }
@@ -41,11 +40,15 @@ if (upper) {
   passwordarray = passwordarray.concat(upperletter);
 }
 
+// else {
+//   window.alert("Please select at least one type.")}
 
 var passwordString = "";
 for (var i = 0; i < passwordLength; i++) {
 passwordString += passwordarray[Math.floor(Math.random() * (passwordarray.length))];
 console.log(passwordString)
+
+
 }
 
 return passwordString;
