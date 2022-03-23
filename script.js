@@ -16,18 +16,12 @@ function makePassword() {
 // This is done with the alert. 
 
   
-  var numbers = confirm("Would you like Numbers?")
-  var special = confirm("Would you like Special characters?")
-  var lower = confirm("Would you like Lowercase letters?")
-  var upper = confirm("Would you like Uppercase letters?")
-
-  // if & else are used to go make sure that something is selected yes for when the prompt comes up,
-  // if none are selected, it will display the message "Please select at least 1 type" and returns
-  //to the beginning of the prompts.
-    // if ((numbers) || (special) || (lower) || (upper)) {
-    //   eleSelect = false;
-    // }
-
+  
+  var numbers = confirm("Would you like Numbers? (Yes-OK ; No-Cancel)")
+  var special = confirm("Would you like Special characters? (Yes-OK ; No-Cancel)")
+  var lower = confirm("Would you like Lowercase letters? (Yes-OK ; No-Cancel)")
+  var upper = confirm("Would you like Uppercase letters? (Yes-OK ; No-Cancel)")
+  
 
 // new section - this is where if the specific element is considered 'true' it will add it to 
 // the open array 'passwordarray' with characters from their orginal array
