@@ -16,11 +16,16 @@ function makePassword() {
 
   
   //Confirm added to find out boolean true or false and to be added to the passwordarray array.
-  var numbers = confirm("Would you like Numbers? (Yes-OK ; No-Cancel)")
-  var special = confirm("Would you like Special characters? (Yes-OK ; No-Cancel)")
-  var lower = confirm("Would you like Lowercase letters? (Yes-OK ; No-Cancel)")
+  var numbers = confirm("Would you like Numbers? (Yes-OK : No-Cancel)")
+  var special = confirm("Would you like Special characters? (Yes-OK : No-Cancel)")
+  var lower = confirm("Would you like Lowercase letters? (Yes-OK : No-Cancel)")
   var upper = confirm("Would you like Uppercase letters? (Yes-OK ; No-Cancel)")
-  
+
+    if ((numbers === false) && (special === false) && (lower === false) && (upper === false)){
+    window.alert("Please select at least one type.") 
+    makePassword() } 
+
+
 
 // This is where if the specific element is considered 'true' from the confirms above. It 
 // will add it to the open array 'passwordarray' with characters from their orginal array
@@ -40,15 +45,9 @@ if (upper) {
   passwordarray = passwordarray.concat(upperletter);
 }
 
-// else {
-//   window.alert("Please select at least one type.")}
-
 var passwordString = "";
 for (var i = 0; i < passwordLength; i++) {
 passwordString += passwordarray[Math.floor(Math.random() * (passwordarray.length))];
-console.log(passwordString)
-
-
 }
 
 return passwordString;
