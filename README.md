@@ -1,6 +1,6 @@
 # CodeGenerator
 
-## Live link to deployed app
+## Github URL
 https://mclanea92.github.io/CodeGenerator/
 
 ## List of technologies used
@@ -57,4 +57,7 @@ The image below takes into account what choices that the user has made to create
 ![selector for specific elements to create the password.](./password.png)
 
 
+The image below is a screenshot of when you click generate passwork.  First question is how many characters to use for the password
+
+![image of screen with first question](./question.png)
 
