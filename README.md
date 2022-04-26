@@ -1,5 +1,17 @@
 # CodeGenerator
 
+## Live link to deployed app
+https://mclanea92.github.io/CodeGenerator/
+
+## List of technologies used
+-Javascript
+-CSS
+-HTML
+
+## Overview
+This application is used to create a random password from the criteria that was provided from the user. From 8 to 128 characters, letters, numbers and symbols.  
+
+
 ## User Story
 For this homework, a company wants me to create a random password generator.  Starter code was provided.  This password generator
 gives the user the ability to pick from uppercase, lowercase, special characters and numbers.  It also asks for the length of the 
