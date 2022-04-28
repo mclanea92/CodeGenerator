@@ -5,8 +5,8 @@ https://mclanea92.github.io/CodeGenerator/
 
 ## List of technologies used
 - Javascript
--CSS
--HTML
+- CSS
+- HTML
 
 ## About Application:
 This application is used to create a random password from the criteria that was provided from the user. From 8 to 128 characters, letters, numbers and symbols.  
