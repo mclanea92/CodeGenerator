@@ -55,10 +55,10 @@ This image below shows the arrays made with all the characters broken up into 4 
 
 The image below takes into account what choices that the user has made to create the password with their specifications.
 
-![selector for specific elements to create the password.](./password.png)
+![selector for specific elements to create the password.](./assets/password.png)
 
 
 The image below is a screenshot of when you click generate passwork.  First question is how many characters to use for the password
 
-![image of screen with first question](./question.png)
+![image of screen with first question](./assets/question.png)
 
