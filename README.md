@@ -4,7 +4,7 @@
 https://mclanea92.github.io/CodeGenerator/
 
 ## List of technologies used
--Javascript
+- Javascript
 -CSS
 -HTML
 
