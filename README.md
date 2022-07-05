@@ -21,7 +21,7 @@ provided.
 Create a js file that helps the page respond the way the company asks.  From picking specific characteristics to the length of the password.
 
 ## Acceptance Citeria
-
+```md
 GIVEN I need a new, secure password
 WHEN I click the button to generate a password
 THEN I am presented with a series of prompts for password criteria
@@ -37,7 +37,7 @@ WHEN all prompts are answered
 THEN a password is generated that matches the selected criteria
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
-
+```
 
 ## Deployed URL
 https://mclanea92.github.io/CodeGenerator/
