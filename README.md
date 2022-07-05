@@ -48,7 +48,7 @@ https://github.com/mclanea92/CodeGenerator
 ## Screenshots
 This image below shows the arrays made with all the characters broken up into 4 variables in arrays.
 
-![Arrays of special characters for the code generator to pull from.](./assets//array.png)
+![Arrays of special characters for the code generator to pull from.](./assets/array.png)
 
 
 
