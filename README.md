@@ -45,6 +45,9 @@ https://mclanea92.github.io/CodeGenerator/
 ## Github URL
 https://github.com/mclanea92/CodeGenerator
 
+## Contact/Questions
+If you have any questions about this project, please feel free to contact me at mclanea92@gmail.com
+
 ## Screenshots
 This image below shows the arrays made with all the characters broken up into 4 variables in arrays.
 
